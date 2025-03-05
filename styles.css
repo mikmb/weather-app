@@ -1,0 +1,171 @@
+* {
+  font-family: "Poppins", sans-serif;
+  --primary-color: #213f99;
+}
+body {
+  background-color: #01b0f0;
+  padding: 10px 20px;
+  margin: auto;
+  width: 80%;
+}
+
+header {
+  display: flex;
+}
+.page-title {
+  flex: 1;
+  display: flex;
+  font-weight: bold;
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.temp-unit-button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.celsius,
+.fahrenheit {
+  appearance: none;
+  border: none;
+  padding: 3px;
+}
+
+.celsius.selected,
+.fahrenheit.selected {
+  background-color: #00a14b;
+}
+
+.celsius {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.fahrenheit {
+  border-radius: 0px 4px 4px 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  width: 300px;
+  outline: none;
+}
+
+.error {
+  grid-row-start: 2;
+  color: #b1295b;
+  font-weight: 400;
+  font-size: 16px;
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+#search-button {
+  border: none;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  color: #ffff;
+  cursor: pointer;
+}
+
+#search-button i {
+  padding-right: 5px;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-name {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.weather-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.temp {
+  font-weight: 600;
+}
+.weather-details {
+  display: flex;
+  gap: 4rem;
+  color: var(--primary-color);
+}
+
+.conditions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.condition-icon {
+  display: flex;
+  padding-left: 0px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+.condition-text {
+  display: flex;
+  font-size: 40px;
+}
+
+.weather-info-right {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid white;
+  padding-left: 1.5rem;
+}
+.weather-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 5px 0px;
+  border-bottom: 1px solid white;
+}
+
+.weather-info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  display: flex;
+  font-weight: 200;
+}
+
+.info-value {
+  display: flex;
+  font-weight: 600;
+}
